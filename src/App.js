@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
+import { ThemeProvider } from 'styled-components';
+import { Navbar } from './components';
+import { Homepage, Offer, Gallery, About, Contact } from './pages';
+
+import { GlobalStyles } from './index.css';
+import theme from './utils/theme';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const { t } = useTranslation();
+
+    return (
+        <>
+            <GlobalStyles />
+            <Router>
+                <Navbar items={[
+                    {content: t('homepage'), to: '/'},
+                    {content: t('offer'), to: '/offer'},
+                    {content: t('gallery'), to: '/gallery'},
+                    {content: t('about'), to: '/about'},
+                    {content: t('contact'), to: '/contact'}
+                ]}
+                />
+                <div>
+                    <Switch>
+                        <Route exact path='/'>
+                            <Homepage />
+                        </Route>
+                        <Route path='/offer'>
+                            <Offer />
+                        </Route>
+                        <Route path='/gallery'>
+                            <Gallery />
+                        </Route>
+                        <Route path='/about'>
+                            <About />
+                        </Route>
+                        <Route path='/contact'>
+                            <Contact />
+                        </Route>
+                    </Switch>
+                </div>
+            </Router>
+        </>
+    );
 }
 
-export default App;
+function RootApp() {
+    return (
+        <ThemeProvider theme={theme}>
+            <App />
+        </ThemeProvider>
+    );
+}
+
+export default RootApp;
