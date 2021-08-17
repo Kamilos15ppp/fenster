@@ -45,6 +45,7 @@ export const MenuList = styled.ul`
     background-color: ${({ theme }) => theme.colors.gray.normal};
     list-style: none;
     transition: .8s;
+    z-index: 98;
 `
 
 export const LanguageList = styled.ul`
@@ -60,6 +61,7 @@ export const LanguageList = styled.ul`
     background-color: ${({ theme }) => theme.colors.gray.normal};
     list-style: none;
     transition: .6s;
+    z-index: 98;
 `
 
 export const MenuItem = styled.li`
