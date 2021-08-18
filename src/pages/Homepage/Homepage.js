@@ -46,7 +46,7 @@ function Homepage() {
                     <Animated
                         animationIn="bounceInUp"
                         animationInDuration={1200}
-                        animationInDelay={1100}
+                        animationInDelay={600}
                         isVisible={true}
                     >
                         <PersonTitle>Natalia Stachnik</PersonTitle>

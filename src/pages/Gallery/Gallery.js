@@ -21,7 +21,7 @@ function Gallery() {
         <GalleryWrapper>
             <GalleryHeader
                 data-aos='fade-down'
-                data-aos-delay="100"
+                data-aos-delay="300"
                 data-aos-duration="1000"
             >
                 {t('gallery')}
@@ -30,11 +30,13 @@ function Gallery() {
                 <GalleryImage
                     num={'0'}
                     data-aos='zoom-in'
+                    data-aos-delay="800"
                     data-aos-duration="1000"
                 />
                 <GalleryImage
                     num={'1'}
                     data-aos='zoom-in'
+                    data-aos-delay="900"
                     data-aos-duration="1000"
                 />
                 <GalleryImage
