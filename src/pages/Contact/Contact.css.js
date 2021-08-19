@@ -38,7 +38,6 @@ export const ContactMap = styled.div`
   	width: 18rem;
   	height: 16rem;
   	border-radius: 15px;
-  	z-index: 100;
 `;
 
 export const Icon = styled.span`
