@@ -16,7 +16,6 @@ export const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Poppins', sans-serif;
     font-size: ${theme.fontSize};
-    min-height: 200vh;
   }
   
 `;
