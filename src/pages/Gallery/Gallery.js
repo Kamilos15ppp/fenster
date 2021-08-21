@@ -23,6 +23,7 @@ function Gallery() {
                 data-aos='fade-down'
                 data-aos-delay="300"
                 data-aos-duration="1000"
+                data-aos-once="true"
             >
                 {t('gallery')}
             </GalleryHeader>
@@ -30,34 +31,44 @@ function Gallery() {
                 <GalleryImage
                     num={'0'}
                     data-aos='zoom-in'
-                    data-aos-delay="800"
+                    data-aos-delay="500"
                     data-aos-duration="1000"
+                    data-aos-once="true"
                 />
                 <GalleryImage
                     num={'1'}
                     data-aos='zoom-in'
-                    data-aos-delay="900"
+                    data-aos-delay="700"
                     data-aos-duration="1000"
+                    data-aos-once="true"
                 />
                 <GalleryImage
                     num={'2'}
                     data-aos='zoom-in'
+                    data-aos-delay="800"
                     data-aos-duration="1000"
+                    data-aos-once="true"
                 />
                 <GalleryImage
                     num={'0'}
                     data-aos='zoom-in'
+                    data-aos-delay="900"
                     data-aos-duration="1000"
+                    data-aos-once="true"
                 />
                 <GalleryImage
                     num={'1'}
                     data-aos='zoom-in'
+                    data-aos-delay="1000"
                     data-aos-duration="1000"
+                    data-aos-once="true"
                 />
                 <GalleryImage
                     num={'2'}
                     data-aos='zoom-in'
+                    data-aos-delay="1100"
                     data-aos-duration="1000"
+                    data-aos-once="true"
                 />
             </ImagesWrapper>
         </GalleryWrapper>

@@ -57,6 +57,7 @@ function Homepage() {
                 data-aos='fade-down'
                 data-aos-delay="50"
                 data-aos-duration="1000"
+                data-aos-once="true"
             >
                 {t('homepage_header')}
             </HomepageHeader>
@@ -67,6 +68,7 @@ function Homepage() {
                     data-aos='fade-left'
                     data-aos-delay="50"
                     data-aos-duration="1000"
+                    data-aos-once="true"
                 >
                     <HomepageImageDarker />
                     <HomepageImageHeader>
@@ -85,6 +87,7 @@ function Homepage() {
                     data-aos='fade-right'
                     data-aos-delay="100"
                     data-aos-duration="1000"
+                    data-aos-once="true"
                 >
                     <HomepageImageDarker />
                     <HomepageImageHeader>
@@ -103,6 +106,7 @@ function Homepage() {
                     data-aos='fade-left'
                     data-aos-delay="200"
                     data-aos-duration="1000"
+                    data-aos-once="true"
                 >
                     <HomepageImageDarker />
                     <HomepageImageHeader>

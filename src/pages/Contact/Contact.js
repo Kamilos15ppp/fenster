@@ -11,6 +11,7 @@ import {
     ContactAddress,
     ContactMap,
     Icon,
+    LinksWrapper,
     Map
 } from './Contact.css';
 
@@ -29,41 +30,47 @@ function Contact() {
                 data-aos='fade-down'
                 data-aos-delay="300"
                 data-aos-duration="1000"
+                data-aos-once="true"
             >
                 {t('contact')}
             </ContactHeader>
-            <ContactLink
-                href={`tel: ${telNumber}`}
-                data-aos='fade-left'
-                data-aos-delay="600"
-                data-aos-duration="1000"
-            >
-                <Icon>
-                    <FontAwesomeIcon icon={faPhoneAlt} />
-                </Icon>
-                {telNumber}
-            </ContactLink>
-            <ContactLink
-                href={`mailto: ${email}`}
-                data-aos='fade-left'
-                data-aos-delay="650"
-                data-aos-duration="1000"
-            >
-                <Icon>
-                    <FontAwesomeIcon icon={faEnvelope} />
-                </Icon>
-                {email}
-            </ContactLink>
-            <ContactAddress
-                data-aos='fade-left'
-                data-aos-delay="700"
-                data-aos-duration="1000"
-            >
-                <Icon>
-                    <FontAwesomeIcon icon={faMapMarkerAlt} />
-                </Icon>
-                ul. Nowaka 15a
-            </ContactAddress>
+            <LinksWrapper>
+                <ContactLink
+                    href={`tel: ${telNumber}`}
+                    data-aos='fade-left'
+                    data-aos-delay="600"
+                    data-aos-duration="1000"
+                    data-aos-once="true"
+                >
+                    <Icon>
+                        <FontAwesomeIcon icon={faPhoneAlt} />
+                    </Icon>
+                    {telNumber}
+                </ContactLink>
+                <ContactLink
+                    href={`mailto: ${email}`}
+                    data-aos='fade-left'
+                    data-aos-delay="650"
+                    data-aos-duration="1000"
+                    data-aos-once="true"
+                >
+                    <Icon>
+                        <FontAwesomeIcon icon={faEnvelope} />
+                    </Icon>
+                    {email}
+                </ContactLink>
+                <ContactAddress
+                    data-aos='fade-left'
+                    data-aos-delay="700"
+                    data-aos-duration="1000"
+                    data-aos-once="true"
+                >
+                    <Icon>
+                        <FontAwesomeIcon icon={faMapMarkerAlt} />
+                    </Icon>
+                    ul. Nowaka 15a
+                </ContactAddress>
+            </LinksWrapper>
             <ContactMap
                 data-aos='zoom-in'
                 data-aos-delay="800"

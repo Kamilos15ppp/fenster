@@ -11,9 +11,6 @@ import {
     AboutSignet
 } from './About.css';
 
-import logotype from '../../assets/images/logotype_small.png';
-import signet from '../../assets/images/signet_small.png';
-
 function About() {
     const { t } = useTranslation();
 
@@ -27,6 +24,7 @@ function About() {
                 data-aos='fade-down'
                 data-aos-delay="300"
                 data-aos-duration="1000"
+                data-aos-once="true"
             >
                 {t('about')}
             </AboutHeader>
@@ -34,19 +32,20 @@ function About() {
                 data-aos='fade-up-left'
                 data-aos-delay="800"
                 data-aos-duration="1000"
+                data-aos-once="true"
             >
                 {t('about_info')}
             </AboutInfo>
             <AboutLogotype
                 data-aos='zoom-in'
                 data-aos-duration="1000"
-                src={logotype}
+                data-aos-once="true"
             />
             <AboutSignet
                 data-aos='zoom-in'
                 data-aos-delay="300"
                 data-aos-duration="1000"
-                src={signet}
+                data-aos-once="true"
             />
         </AboutWrapper>
     );
