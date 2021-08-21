@@ -1,7 +1,7 @@
 const size = {
     xs: '360px',
     sm: '768px',
-    lg: '1200',
+    lg: '1200px',
 }
 
 const device = {
