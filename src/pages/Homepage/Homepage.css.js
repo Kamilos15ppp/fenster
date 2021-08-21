@@ -46,6 +46,15 @@ export const CompanyTitle = styled.h2`
     text-align: center;
     color: #fff;
     filter: brightness(100%);
+
+	@media only screen and ${breakpoints.device.sm} {
+		font-size: 3.5rem;
+	}
+	
+	@media only screen and ${breakpoints.device.lg} {
+	width: 100%;
+		font-size: 4rem;
+	}
 `;
 
 export const PersonTitle = styled.h2`
@@ -53,24 +62,34 @@ export const PersonTitle = styled.h2`
     text-align: center;
     color: #fff;
     filter: brightness(100%);
+
+	@media only screen and ${breakpoints.device.sm} {
+	  	font-size: 2.4rem;
+	}
+	
+	@media only screen and ${breakpoints.device.lg} {
+	width: 100%;
+		font-size: 3rem;
+	}
 `;
 
 export const HomepageHeader = styled.h1`
     font-size: 2rem;
     margin-bottom: 3rem;
     text-align: center;
-  
-    @media only screen and ${breakpoints.device.xs} {
-      font-size: 2.2rem;
-    }
-  
-    @media only screen and ${breakpoints.device.sm} {
-      font-size: 4.5rem;
-    }
-  
-    @media only screen and ${breakpoints.device.lg} {
-      font-size: 4rem;
-    }
+
+	@media only screen and ${breakpoints.device.xs} {
+		font-size: 2.4rem;
+	}
+	
+	@media only screen and ${breakpoints.device.sm} {
+		font-size: 3.2rem;
+	}
+	
+	@media only screen and ${breakpoints.device.lg} {
+	width: 100%;
+		font-size: 3.4rem;
+	}
 `;
 
 export const ArticleWrapper = styled.article`
@@ -81,6 +100,14 @@ export const ArticleWrapper = styled.article`
     align-items: center;
     width: 100%;
     height: 12rem;
+	
+	@media only screen and ${breakpoints.device.sm} {
+      	height: 20rem;
+	}
+	
+	@media only screen and ${breakpoints.device.lg} {
+      	height: 30rem;
+	}
 `;
 
 export const HomepageImage = styled.div`
@@ -100,6 +127,16 @@ export const HomepageImage = styled.div`
     border-radius: 20px;
     box-shadow: 2px 2px 15px 0 rgba(0,0,0,0.75);
     z-index: -1;
+
+	@media only screen and ${breakpoints.device.sm} {
+      	width: 26rem;
+      	height: 20rem;
+	}
+	
+	@media only screen and ${breakpoints.device.lg} {
+		width: 40rem;
+		height: 30rem;
+	}
 `;
 
 export const HomepageImageDarker = styled.div`
@@ -115,4 +152,12 @@ export const HomepageImageHeader = styled.h3`
     text-align: center;
     color: #fff;
     filter: brightness(100%);
+
+	@media only screen and ${breakpoints.device.sm} {
+		font-size: 3rem;
+	}
+	
+	@media only screen and ${breakpoints.device.lg} {
+      	font-size: 4rem;
+    }
 `;

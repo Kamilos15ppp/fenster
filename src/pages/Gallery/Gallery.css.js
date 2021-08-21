@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import breakpoints from "../../utils/breakpoints";
 
 import img1 from '../../assets/images/1.jpg';
 import img2 from '../../assets/images/2.jpg';
@@ -23,6 +24,19 @@ export const ImagesWrapper = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
     grid-gap: 2rem;
+
+		@media only screen and ${breakpoints.device.sm} {
+		  	margin-top: 2rem;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			grid-gap: 3rem;
+		}
+  
+		@media only screen and ${breakpoints.device.lg} {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			grid-gap: 5rem;
+		}
 `;
 
 export const GalleryImage = styled.div`
@@ -35,4 +49,15 @@ export const GalleryImage = styled.div`
     width: 17rem;
     height: 13rem;
     border-radius: 15px;
+
+	@media only screen and ${breakpoints.device.sm} {
+	  	margin: 0;
+      	width: 20rem;
+      	height: 16rem;
+	}
+  
+	@media only screen and ${breakpoints.device.lg} {
+      	width: 23rem;
+      	height: 19rem;
+	}
 `;
