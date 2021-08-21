@@ -3,10 +3,16 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { ThemeProvider } from 'styled-components';
-import { Navbar } from './components';
-import { Homepage, Offer, Gallery, About, Contact } from './pages';
+import { Navbar, Footer } from './components';
+import {
+    Homepage,
+    Offer,
+    Gallery,
+    About,
+    Contact
+} from './pages';
 
-import { GlobalStyles, LoadingIndicator } from './index.css';
+import { GlobalStyles, LoadingIndicator, Main } from './index.css';
 import theme from './utils/theme';
 
 function App() {
@@ -24,7 +30,7 @@ function App() {
                     {content: t('contact'), to: '/contact'}
                 ]}
                 />
-                <div>
+                <Main>
                     <Switch>
                         <Route exact path='/'>
                             <Homepage />
@@ -42,7 +48,12 @@ function App() {
                             <Contact />
                         </Route>
                     </Switch>
-                </div>
+                </Main>
+                <Footer
+                    address={'ul. Nowaka 10a'}
+                    telNumber={'123456789'}
+                    email={'example@x.com'}
+                />
             </Router>
         </>
     );
