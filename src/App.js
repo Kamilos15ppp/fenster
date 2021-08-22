@@ -21,7 +21,7 @@ function App() {
     return (
         <>
             <GlobalStyles />
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Navbar items={[
                     {content: t('homepage'), to: '/'},
                     {content: t('offer'), to: '/offer'},
