@@ -49,6 +49,7 @@ export const GalleryImage = styled.div`
     width: 17rem;
     height: 13rem;
     border-radius: 15px;
+	box-shadow: 2px 2px 15px 0 #000;
 
 	@media only screen and ${breakpoints.device.sm} {
 	  	margin: 0;
