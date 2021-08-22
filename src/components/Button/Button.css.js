@@ -13,7 +13,8 @@ export const BasicButton = styled.button`
     border-radius: 30px;
     font-size: 1rem;
     text-transform: uppercase;
-    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 10px 0 rgba(237, 24, 79, 1);
+  	transition: .3s;
 
 	@media only screen and ${breakpoints.device.sm} {
 		right: ${props => props.position === 'right' ? '16rem' : null};
@@ -27,5 +28,11 @@ export const BasicButton = styled.button`
 		left: ${props => props.position === 'left' ? '26rem' : null};
       	padding: 1rem 1.6rem;
 	  	font-size: 1.8rem;
+	  	box-shadow: none;
+	  	
+	  	&:hover {
+          	box-shadow: 2px 2px 10px 0 rgba(237, 24, 79, 1);
+		  	cursor: pointer;
+        }
 	}
 `;
