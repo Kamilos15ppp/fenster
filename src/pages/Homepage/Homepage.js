@@ -41,7 +41,7 @@ function Homepage() {
                         animationInDuration={800}
                         isVisible={true}
                     >
-                        <CompanyTitle>Fenster & Baurertechnik</CompanyTitle>
+                        <CompanyTitle>Fenster & Bautechnik</CompanyTitle>
                     </Animated>
                     <Animated
                         animationIn="bounceInUp"
