@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { ThemeProvider } from 'styled-components';
@@ -47,6 +47,7 @@ function App() {
                         <Route path='/contact'>
                             <Contact />
                         </Route>
+                        <Redirect to='/' />
                     </Switch>
                 </Main>
                 <Footer
