@@ -69,13 +69,13 @@ export const LanguageIcon = styled.div`
 	}
   
   	@media only screen and ${breakpoints.device.lg} {
+      	right: 4rem;
+	  
 		&:hover {
 			color: #09a0cc;
           	cursor: pointer;
 		}
 	}
-  
-  
 `;
 
 export const MenuList = styled.ul`
@@ -125,7 +125,7 @@ export const LanguageList = styled.ul`
 
 	@media only screen and ${breakpoints.device.sm} {
 		height: 5vh;
-		width: 45vw;
+		width: 40vw;
 		top: ${props => props.areLanguagesOpen ? '6rem' : '-5vh' };
 	}
   
@@ -142,7 +142,7 @@ export const MenuItem = styled.li`
 
   	@media only screen and ${breakpoints.device.lg} {
 	  	padding-top: 0;
-	  	margin: 0 1.5rem;
+	  	margin: 0 1rem;
 	}
 `;
 
@@ -157,6 +157,8 @@ export const MenuOption = styled(Link)`
 	}
 	
 	@media only screen and ${breakpoints.device.lg} {
+	  	font-size: 1.5rem;
+	  
 		&:hover {
 			color: #09a0cc;
 		}
@@ -173,7 +175,7 @@ export const FlagImage = styled.img`
   	transition: .3s;
   
 	@media only screen and ${breakpoints.device.sm} {
-		width: 55%;
+		width: 45%;
 	}  
   
 	@media only screen and ${breakpoints.device.lg} {
