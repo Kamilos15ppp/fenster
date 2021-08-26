@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import ScrollToTop from "./utils/ScrollToTop";
 
 import { ThemeProvider } from 'styled-components';
 import { Navbar, Footer } from './components';
@@ -31,6 +32,7 @@ function App() {
                 ]}
                 />
                 <Main>
+                    <ScrollToTop />
                     <Switch>
                         <Route exact path='/'>
                             <Homepage />
