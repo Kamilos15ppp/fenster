@@ -13,6 +13,10 @@ export const Wrapper = styled.div`
     font-size: 1.2rem;
     z-index: 99;
   
+	@media only screen and ${breakpoints.device.xs} {
+		height: 5rem;
+	} 
+  	
 	@media only screen and ${breakpoints.device.sm} {
 		height: 6rem;
 	} 
@@ -23,29 +27,32 @@ export const Wrapper = styled.div`
 `;
 
 export const Logo = styled.img`
-    width: 50%;
+    width: 55%;
 
-	@media only screen and ${breakpoints.device.sm} {
-		width: 40%;
+	@media only screen and ${breakpoints.device.xs} {
+		width: 50%;
+	}
+  
+  	@media only screen and ${breakpoints.device.sm} {
+		width: 35%;
 	}
   
 	@media only screen and ${breakpoints.device.lg} {
-		width: 20%;
+		width: 15%;
 	}
 `;
 
 export const MenuIcon = styled.div`
     position: absolute;
-    top: 1rem;
+	top: 50%;
     right: 1rem;
     font-size: 1.8rem;
     color: #fff;
+	transform: translateY(-50%);
 
 	@media only screen and ${breakpoints.device.sm} {
-	  	top: 50%;
 	  	right: 1.5rem;
 	  	font-size: 2.4rem;
-	  	transform: translateY(-50%);
 	}
   
   	@media only screen and ${breakpoints.device.lg} {
@@ -55,17 +62,16 @@ export const MenuIcon = styled.div`
 
 export const LanguageIcon = styled.div`
 	position: absolute;
-	top: 1rem;
+	top: 50%;
 	right: 4rem;
 	font-size: 1.8rem;
 	color: #fff;
+	transform: translateY(-50%);
   	transition: .3s;
-
+  
 	@media only screen and ${breakpoints.device.sm} {
-		top: 50%;
 		right: 5.5rem;
 		font-size: 2.4rem;
-		transform: translateY(-50%);
 	}
   
   	@media only screen and ${breakpoints.device.lg} {
@@ -91,10 +97,14 @@ export const MenuList = styled.ul`
     list-style: none;
     transition: .8s;
     z-index: 98;
-
+  
+  	@media only screen and (orientation: landscape) {
+	  	height: 75vh;
+	}
+  
 	@media only screen and ${breakpoints.device.sm} {
-      	height: 40vh;
-      	top: ${props => props.isMenuOpen ? '6rem' : '-40vh'};
+      	height: 50vh;
+      	top: ${props => props.isMenuOpen ? '6rem' : '-50vh'};
     }
   
 	@media only screen and ${breakpoints.device.lg} {
@@ -106,40 +116,54 @@ export const MenuList = styled.ul`
 	  	z-index: 99;
 	  
     }
-`
+`;
 
 export const LanguageList = styled.ul`
     position: absolute;
     right: 2rem;
     display: flex;
-    height: 10vh;
-    width: 60vw;
+    height: 6vh;
+    width: 55vw;
     justify-content: center;
     align-items: center;
     text-align: center;
-    top: ${props => props.areLanguagesOpen ? '4rem' : '-10vh' };
+    top: ${props => props.areLanguagesOpen ? '4rem' : '-6vh' };
     background-color: ${({ theme }) => theme.colors.gray.normal};
     list-style: none;
     transition: .6s;
     z-index: 98;
 
+	@media only screen and ${breakpoints.device.xs} {
+		height: 7vh;
+		width: 50vw;
+		top: ${props => props.areLanguagesOpen ? '5rem' : '-7vh' };
+	}
+
+	@media only screen and (orientation: landscape) and ${breakpoints.device.xs} {
+		height: 12vh;
+	}
+  
 	@media only screen and ${breakpoints.device.sm} {
-		height: 5vh;
-		width: 40vw;
-		top: ${props => props.areLanguagesOpen ? '6rem' : '-5vh' };
+		height: 6vh;
+		width: 30vw;
+		top: ${props => props.areLanguagesOpen ? '6rem' : '-6vh' };
 	}
   
 	@media only screen and ${breakpoints.device.lg} {
       	right: 0;
-      	height: 5vh;
+      	height: 7vh;
 		width: 15vw;
-		top: ${props => props.areLanguagesOpen ? '5rem' : '-5vh' };
+		top: ${props => props.areLanguagesOpen ? '5rem' : '-7vh' };
 	}
-`
+`;
 
 export const MenuItem = styled.li`
     padding-top: 1.5rem;
 
+	@media only screen and (orientation: landscape) {
+		padding-top: 1rem;
+	}
+  
   	@media only screen and ${breakpoints.device.lg} {
 	  	padding-top: 0;
 	  	margin: 0 1rem;
@@ -170,12 +194,12 @@ export const LanguageItem = styled.li`
 `;
 
 export const FlagImage = styled.img`
-    width: 50%;
+    width: 55%;
     border-radius: 10%;
   	transition: .3s;
   
 	@media only screen and ${breakpoints.device.sm} {
-		width: 45%;
+		width: 55%;
 	}  
   
 	@media only screen and ${breakpoints.device.lg} {

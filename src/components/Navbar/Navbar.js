@@ -41,7 +41,7 @@ function Navbar({ items= [] }) {
     }
 
     return (
-        <>
+        <nav>
             <Wrapper>
                 <Logo src={logo} alt="logo"/>
                 <LanguageIcon onClick={handleLanguageOnChange}>
@@ -77,7 +77,7 @@ function Navbar({ items= [] }) {
                     </LanguageItem>
                 ))}
             </LanguageList>
-        </>
+        </nav>
     );
 }
 
