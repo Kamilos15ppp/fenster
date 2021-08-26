@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
     justify-content: start;
     align-items: center;
     background-color: ${({ theme }) => theme.colors.gray.normal};
-    font-size: 1.2rem;
     z-index: 99;
   
 	@media only screen and ${breakpoints.device.xs} {
@@ -46,13 +45,10 @@ export const MenuIcon = styled.div`
     position: absolute;
 	top: 50%;
     right: 1rem;
-    font-size: 1.8rem;
-    color: #fff;
 	transform: translateY(-50%);
 
 	@media only screen and ${breakpoints.device.sm} {
 	  	right: 1.5rem;
-	  	font-size: 2.4rem;
 	}
   
   	@media only screen and ${breakpoints.device.lg} {
@@ -67,7 +63,6 @@ export const LanguageIcon = styled.div`
 	font-size: 1.8rem;
 	color: #fff;
 	transform: translateY(-50%);
-  	transition: .3s;
   
 	@media only screen and ${breakpoints.device.sm} {
 		right: 5.5rem;
@@ -78,7 +73,6 @@ export const LanguageIcon = styled.div`
       	right: 4rem;
 	  
 		&:hover {
-			color: #09a0cc;
           	cursor: pointer;
 		}
 	}
