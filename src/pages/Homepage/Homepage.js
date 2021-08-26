@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Animated } from 'react-animated-css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { gsap } from 'gsap';
 
 import { Button } from '../../components';
 import {
@@ -26,31 +26,41 @@ import materialsImage from '../../assets/images/screw.jpg';
 
 function Homepage() {
     const { t } = useTranslation();
+    const companyRef = useRef(null);
+    const personRef = useRef(null);
 
     useEffect(() => {
         AOS.init();
     }, []);
+
+    useEffect(() => {
+        gsap.fromTo(
+            companyRef.current,
+            { scale: 0, autoAlpha: 0 },
+            { duration: 1.2, scale: 1, autoAlpha: 1, ease: 'bounce' }
+        );
+        gsap.fromTo(
+            personRef.current,
+            { y: '+=400', autoAlpha: 0 },
+            { duration: 1.2, delay: 1, y: 0, autoAlpha: 1, ease: 'back' }
+        );
+    },[]);
 
     return (
         <HomepageWrapper>
             <HeaderWrapper>
                 <HeaderImageDarker/>
                 <HeaderImage>
-                    <Animated
-                        animationIn="zoomIn"
-                        animationInDuration={800}
-                        isVisible={true}
+                    <CompanyTitle
+                        ref={companyRef}
                     >
-                        <CompanyTitle>Fenster & Bautechnik</CompanyTitle>
-                    </Animated>
-                    <Animated
-                        animationIn="bounceInUp"
-                        animationInDuration={1200}
-                        animationInDelay={600}
-                        isVisible={true}
+                        Fenster & Bautechnik
+                    </CompanyTitle>
+                    <PersonTitle
+                        ref={personRef}
                     >
-                        <PersonTitle>Natalia Stachnik</PersonTitle>
-                    </Animated>
+                        Natalia Stachnik
+                    </PersonTitle>
                 </HeaderImage>
             </HeaderWrapper>
             <HomepageHeader
