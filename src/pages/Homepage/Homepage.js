@@ -78,6 +78,7 @@ function Homepage() {
                 <Button
                     content={t('see_the_offer')}
                     position='right'
+                    to='/offer'
                 />
             </ArticleWrapper>
             <ArticleWrapper>
@@ -97,6 +98,7 @@ function Homepage() {
                 <Button
                     content={t('see_the_offer')}
                     position='left'
+                    to='/offer'
                 />
             </ArticleWrapper>
             <ArticleWrapper>
@@ -116,6 +118,7 @@ function Homepage() {
                 <Button
                     content={t('see_the_offer')}
                     position='right'
+                    to='/offer'
                 />
             </ArticleWrapper>
         </HomepageWrapper>

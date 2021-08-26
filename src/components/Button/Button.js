@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import { BasicButton } from './Button.css';
 
-function Button({ content, position }) {
+function Button({ content, position, to }) {
     return (
-        <BasicButton position={position}>{content}</BasicButton>
+        <Link to={to}>
+            <BasicButton position={position}>{content}</BasicButton>
+        </Link>
     );
 }
 
