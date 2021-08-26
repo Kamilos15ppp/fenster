@@ -21,7 +21,7 @@ function Footer({ address, telNumber, email }) {
 				email: {email}
 			</FooterLink>
 			<FooterAddress>{address}</FooterAddress>
-			<FooterCopy>Copyright Fenster & Bauertechnik</FooterCopy>
+			<FooterCopy>Copyright Fenster & Bauertechnik - Natalia Stachnik</FooterCopy>
 		</FooterWrapper>
 	);
 }

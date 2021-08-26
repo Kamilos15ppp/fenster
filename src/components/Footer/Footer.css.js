@@ -26,7 +26,7 @@ export const FooterAddress = styled.span`
 `;
 
 export const FooterCopy = styled.span`
-	padding-top: 1.5rem;
+	padding: 1.5rem 2rem 1rem 2rem;
   	font-size: 1rem;
 	font-style: italic;
   	text-align: center;
