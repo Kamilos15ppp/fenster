@@ -6,10 +6,10 @@ export const ContactWrapper = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  	font-size: 1.2rem;
+  	font-size: 1rem;
 
 	@media only screen and ${breakpoints.device.xs} {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 	}
   
   	@media only screen and ${breakpoints.device.sm} {
@@ -64,9 +64,11 @@ export const ContactLink = styled.a`
 
 export const ContactAddress = styled.span`
 	display: flex;
+    padding: 0 7rem;
 	margin: .6rem 0;
 	justify-content: center;
 	align-items: center;
+   text-align: center;
 
 	@media only screen and ${breakpoints.device.lg} {
 	  	margin: 1rem 0;
@@ -96,8 +98,13 @@ export const ContactMap = styled.div`
 `;
 
 export const Icon = styled.span`
-	margin-right: 2rem;
-  	font-size: 2rem;
+	margin-right: .5rem;
+  	font-size: 1.4rem;
+  	
+  	@media only screen and ${breakpoints.device.sm} {
+	  	margin-right: 1rem;
+	  	font-size: 2rem;
+	}
 `;
 
 export const Map = styled.iframe`

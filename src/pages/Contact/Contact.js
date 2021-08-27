@@ -17,8 +17,9 @@ import {
 
 function Contact() {
     const { t } = useTranslation();
-    const telNumber = '123456789';
-    const email = 'example@xyz.com'
+    const telNumber = '+49 176 242 648 54';
+    const email = 'nataliastachnik.ns@gmail.com';
+    const address = 'Oberurseler Str. 3, 61440 Oberursel';
 
     useEffect(() => {
         AOS.init();
@@ -68,7 +69,7 @@ function Contact() {
                     <Icon>
                         <FontAwesomeIcon icon={faMapMarkerAlt} />
                     </Icon>
-                    ul. Nowaka 15a
+                    {address}
                 </ContactAddress>
             </LinksWrapper>
             <ContactMap
@@ -78,7 +79,7 @@ function Contact() {
                 data-aos-once="true"
             >
                 <Map
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.775831091222!2d13.409334092157154!3d52.519395812527776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e21c9e04553%3A0xdc8ba3db16be397d!2sBerliner%20Innenstadt%2C%20Berlin%2C%20Niemcy!5e0!3m2!1spl!2spl!4v1629387475555!5m2!1spl!2spl"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d638.7068215167187!2d8.595144982547483!3d50.18306550841588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd081af2e20931%3A0xeaf8dbe9612a81a8!2sOberurseler%20Str.%203%2C%2061440%20Oberursel%20(Taunus)%2C%20Niemcy!5e0!3m2!1spl!2spl!4v1630072317764!5m2!1spl!2spl"
                     loading='lazy'
                 />
             </ContactMap>
