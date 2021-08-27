@@ -53,9 +53,9 @@ function App() {
                     </Switch>
                 </Main>
                 <Footer
-                    address={'ul. Nowaka 10a'}
-                    telNumber={'123456789'}
-                    email={'example@x.com'}
+                    address='Oberurseler Str. 3, 61440 Oberursel'
+                    telNumber='+49 176 242 648 54'
+                    email='nataliastachnik.ns@gmail.com'
                 />
             </Router>
         </>
