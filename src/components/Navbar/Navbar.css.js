@@ -46,6 +46,7 @@ export const MenuIcon = styled.div`
 	top: 50%;
     right: 1rem;
 	transform: translateY(-50%);
+	cursor: pointer;
 
 	@media only screen and ${breakpoints.device.sm} {
 	  	right: 1.5rem;
@@ -62,6 +63,7 @@ export const LanguageIcon = styled.div`
 	right: 4rem;
 	font-size: 1.8rem;
 	color: #fff;
+	cursor: pointer;
 	transform: translateY(-50%);
   
 	@media only screen and ${breakpoints.device.sm} {
@@ -71,10 +73,6 @@ export const LanguageIcon = styled.div`
   
   	@media only screen and ${breakpoints.device.lg} {
       	right: 4rem;
-	  
-		&:hover {
-          	cursor: pointer;
-		}
 	}
 `;
 
