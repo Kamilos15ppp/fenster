@@ -30,20 +30,37 @@ function About() {
             </AboutHeader>
             <AboutInfo
                 data-aos='fade-up-left'
+                data-aos-delay="600"
+                data-aos-duration="1000"
+                data-aos-once="true"
+            >
+                {t('about_info1')}
+            </AboutInfo>
+            <AboutInfo
+                data-aos='fade-up-left'
+                data-aos-delay="700"
+                data-aos-duration="1000"
+                data-aos-once="true"
+            >
+                {t('about_info2')}
+            </AboutInfo>
+            <AboutInfo
+                data-aos='fade-up-left'
                 data-aos-delay="800"
                 data-aos-duration="1000"
                 data-aos-once="true"
             >
-                {t('about_info')}
+                {t('about_info3')}
             </AboutInfo>
             <AboutLogotype
                 data-aos='zoom-in'
+                data-aos-delay="900"
                 data-aos-duration="1000"
                 data-aos-once="true"
             />
             <AboutSignet
                 data-aos='zoom-in'
-                data-aos-delay="300"
+                data-aos-delay="200"
                 data-aos-duration="1000"
                 data-aos-once="true"
             />

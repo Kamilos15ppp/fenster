@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import breakpoints from '../../utils/breakpoints';
 
-import logotype from '../../assets/images/logotype_small.png';
-import signet from '../../assets/images/signet_small.png';
+import logotype from '../../assets/images/logotype_medium.png';
+import signet from '../../assets/images/signet_medium.png';
 
 export const AboutWrapper = styled.section`
     display: flex;
@@ -63,10 +63,18 @@ const ImageContainer = styled.div`
 
 export const AboutLogotype = styled(ImageContainer)`
 	background-image: url(${logotype});
-    width: 60%;
+    width: 75%;
+    
+    @media only screen and ${breakpoints.device.lg} {
+	  	width: 60%;
+	}
 `;
 
 export const AboutSignet = styled(ImageContainer)`
 	background-image: url(${signet});
-	width: 30%;
+	width: 35%;
+	
+	@media only screen and ${breakpoints.device.lg} {
+	  	width: 45%;
+	}
 `;
