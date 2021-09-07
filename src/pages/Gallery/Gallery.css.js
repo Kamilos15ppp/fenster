@@ -34,8 +34,20 @@ export const ImagesWrapper = styled.div`
 		}
 `;
 
+export const ImgContainer = styled.div`
+    text-align: center;
+`;
+
 export const GalleryImg = styled.img`
 	width: 90%;
 	border-radius: 15px;
 	place-self: center;
+	transition: .4s;
+	
+	@media only screen and ${breakpoints.device.sm} {
+	    &:hover {
+	        transform: scale(1.1);
+	        filter: brightness(85%);
+	    }
+    }
 `;
