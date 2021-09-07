@@ -1,22 +1,22 @@
-import React, { useEffect } from 'react';
-import { useTranslation } from "react-i18next";
-import AOS from "aos";
+import React from 'react';
+// import { useTranslation } from "react-i18next";
+// import AOS from "aos";
 
 import {
     OfferWrapper,
-    CategoryWrapper,
+    // CategoryWrapper,
     OfferCategory,
-    OptionWrapper,
-    OptionHeader,
-    OptionDescription
+    // OptionWrapper,
+    // OptionHeader,
+    // OptionDescription
 } from './Offer.css';
 
 function Offer() {
-    const { t } = useTranslation();
+    // const { t } = useTranslation();
 
-    useEffect(() => {
-        AOS.init();
-    }, []);
+    // useEffect(() => {
+    //     AOS.init();
+    // }, []);
 
     return (
         <OfferWrapper>
