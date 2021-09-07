@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 200 197">
-    <g id="Menu" transform="translate(0 15)">
-        <line id="Line_1" x2="200" fill="none" stroke="#fff" stroke-width="30"/>
-        <line id="Line_2" x2="200" transform="translate(0 70)" fill="none" stroke="#fff" stroke-width="30"/>
-        <line id="Line_3" x2="200" transform="translate(0 140)" fill="none" stroke="#fff" stroke-width="30"/>
-    </g>
-</svg>
