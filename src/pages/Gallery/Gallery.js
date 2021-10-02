@@ -36,6 +36,24 @@ import image7Large from '../../assets/photos/7_l.jpg';
 import image8Small from '../../assets/photos/8_s.jpg';
 import image8Medium from '../../assets/photos/8_m.jpg';
 import image8Large from '../../assets/photos/8_l.jpg';
+import image9Small from '../../assets/photos/9_s.jpg';
+import image9Medium from '../../assets/photos/9_m.jpg';
+import image9Large from '../../assets/photos/9_l.jpg';
+import image10Small from '../../assets/photos/10_s.jpg';
+import image10Medium from '../../assets/photos/10_m.jpg';
+import image10Large from '../../assets/photos/10_l.jpg';
+import image11Small from '../../assets/photos/11_s.jpg';
+import image11Medium from '../../assets/photos/11_m.jpg';
+import image11Large from '../../assets/photos/11_l.jpg';
+import image12Small from '../../assets/photos/12_s.jpg';
+import image12Medium from '../../assets/photos/12_m.jpg';
+import image12Large from '../../assets/photos/12_l.jpg';
+import image13Small from '../../assets/photos/13_s.jpg';
+import image13Medium from '../../assets/photos/13_m.jpg';
+import image13Large from '../../assets/photos/13_l.jpg';
+import image14Small from '../../assets/photos/14_s.jpg';
+import image14Medium from '../../assets/photos/14_m.jpg';
+import image14Large from '../../assets/photos/14_l.jpg';
 
 function Gallery() {
     const { t } = useTranslation();
@@ -47,16 +65,26 @@ function Gallery() {
     }, []);
 
     useEffect(() => {
-        const images = imagesRef.current.children;
-        gsap.fromTo(images[0], { scale: 0, autoAlpha: 0 }, { delay: .5, duration: 1.5, scale: 1, autoAlpha: 1 });
-        gsap.fromTo(images[1], { scale: 0, autoAlpha: 0 }, { delay: 1, duration: 1.5, scale: 1, autoAlpha: 1 });
-        gsap.fromTo(images[2], { scale: 0, autoAlpha: 0 }, { delay: 1.5, duration: 1.5, scale: 1, autoAlpha: 1 });
-        gsap.fromTo(images[3], { scale: 0, autoAlpha: 0 }, { delay: 2, duration: 1.5, scale: 1, autoAlpha: 1 });
-        gsap.fromTo(images[4], { scale: 0, autoAlpha: 0 }, { delay: 2.5, duration: 1.5, scale: 1, autoAlpha: 1 });
-        gsap.fromTo(images[5], { scale: 0, autoAlpha: 0 }, { delay: 3, duration: 1.5, scale: 1, autoAlpha: 1 });
-        gsap.fromTo(images[6], { scale: 0, autoAlpha: 0 }, { delay: 3.5, duration: 1.5, scale: 1, autoAlpha: 1 });
-        gsap.fromTo(images[7], { scale: 0, autoAlpha: 0 }, { delay: 4, duration: 1.5, scale: 1, autoAlpha: 1 });
+        const photos = [...imagesRef.current.children];
+        photos.map((photo) => gsap.fromTo(photo, { scale: 0, autoAlpha: 0 }, { delay: 0.5, duration: 2, scale: 1, autoAlpha: 1 }));
     }, []);
+
+    const images = [
+        {id: 5, imgS: image5Small, imgM: image5Medium, imgL: image5Large, isBig: false},
+        {id: 8, imgS: image8Small, imgM: image8Medium, imgL: image8Large, isBig: false},
+        {id: 1, imgS: image1Small, imgM: image1Medium, imgL: image1Large, isBig: false},
+        {id: 2, imgS: image2Small, imgM: image2Medium, imgL: image2Large, isBig: false},
+        {id: 3, imgS: image3Small, imgM: image3Medium, imgL: image3Large, isBig: false},
+        {id: 4, imgS: image4Small, imgM: image4Medium, imgL: image4Large, isBig: false},
+        {id: 6, imgS: image6Small, imgM: image6Medium, imgL: image6Large, isBig: false},
+        {id: 7, imgS: image7Small, imgM: image7Medium, imgL: image7Large, isBig: false},
+        {id: 13, imgS: image13Small, imgM: image13Medium, imgL: image13Large, isBig: true},
+        {id: 14, imgS: image14Small, imgM: image14Medium, imgL: image14Large, isBig: true},
+        {id: 12, imgS: image12Small, imgM: image12Medium, imgL: image12Large, isBig: true},
+        {id: 11, imgS: image11Small, imgM: image11Medium, imgL: image11Large, isBig: true},
+        {id: 10, imgS: image10Small, imgM: image10Medium, imgL: image10Large, isBig: true},
+        {id: 9, imgS: image9Small, imgM: image9Medium, imgL: image9Large, isBig: true},
+    ];
 
     return (
         <GalleryWrapper>
@@ -69,78 +97,18 @@ function Gallery() {
                 {t('gallery')}
             </GalleryHeader>
             <ImagesWrapper ref={imagesRef}>
-                <ImgContainer>
-                    <GalleryImg
-                        srcSet={`${image1Small} 640w, ${image1Medium} 1280w, ${image1Large} 1920w`}
-                        sizes={sizes}
-                        src={image1Large}
-                        alt='image1'
-                        loading='lazy'
-                    />
-                </ImgContainer>
-                <ImgContainer>
-                    <GalleryImg
-                        srcSet={`${image2Small} 640w, ${image2Medium} 1280w, ${image2Large} 1920w`}
-                        sizes={sizes}
-                        src={image2Large}
-                        alt='image2'
-                        loading='lazy'
-                    />
-                </ImgContainer>
-                <ImgContainer>
-                    <GalleryImg
-                        srcSet={`${image3Small} 640w, ${image3Medium} 1280w, ${image3Large} 1920w`}
-                        sizes={sizes}
-                        src={image3Large}
-                        alt='image3'
-                        loading='lazy'
-                    />
-                </ImgContainer>
-                <ImgContainer>
-                    <GalleryImg
-                        srcSet={`${image4Small} 640w, ${image4Medium} 1280w, ${image4Large} 1920w`}
-                        sizes={sizes}
-                        src={image4Large}
-                        alt='image4'
-                        loading='lazy'
-                    />
-                </ImgContainer>
-                <ImgContainer>
-                    <GalleryImg
-                        srcSet={`${image5Small} 640w, ${image5Medium} 1280w, ${image5Large} 1920w`}
-                        sizes={sizes}
-                        src={image5Large}
-                        alt='image5'
-                        loading='lazy'
-                    />
-                </ImgContainer>
-                <ImgContainer>
-                    <GalleryImg
-                        srcSet={`${image6Small} 640w, ${image6Medium} 1280w, ${image6Large} 1920w`}
-                        sizes={sizes}
-                        src={image6Large}
-                        alt='image6'
-                        loading='lazy'
-                    />
-                </ImgContainer>
-                <ImgContainer>
-                    <GalleryImg
-                        srcSet={`${image7Small} 640w, ${image7Medium} 1280w, ${image7Large} 1920w`}
-                        sizes={sizes}
-                        src={image7Large}
-                        alt='image7'
-                        loading='lazy'
-                    />
-                </ImgContainer>
-                <ImgContainer>
-                    <GalleryImg
-                        srcSet={`${image8Small} 640w, ${image8Medium} 1280w, ${image8Large} 1920w`}
-                        sizes={sizes}
-                        src={image8Large}
-                        alt='image8'
-                        loading='lazy'
-                    />
-                </ImgContainer>
+                {images.map(({id, imgS, imgM, imgL, isBig}) => (
+                    <ImgContainer key={id}>
+                        <GalleryImg
+                            srcSet={`${imgS} 640w, ${imgM} 1280w, ${imgL} 1920w`}
+                            sizes={sizes}
+                            src={imgL}
+                            alt={`Image ${id}`}
+                            loading='lazy'
+                            isBig={isBig}
+                        />
+                    </ImgContainer>
+                ))}
             </ImagesWrapper>
         </GalleryWrapper>
     );

@@ -35,19 +35,28 @@ export const ImagesWrapper = styled.div`
 `;
 
 export const ImgContainer = styled.div`
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const GalleryImg = styled.img`
-	width: 90%;
+	width: ${({ isBig }) => isBig ? '70%' : '100%'};
 	border-radius: 15px;
 	place-self: center;
 	transition: .4s;
+    box-shadow: 5px 5px 30px -5px #000000;
 	
 	@media only screen and ${breakpoints.device.sm} {
+        width: ${({ isBig }) => isBig ? '75%' : '95%'};
+	    	
 	    &:hover {
 	        transform: scale(1.1);
 	        filter: brightness(85%);
 	    }
+    }
+    
+	@media only screen and ${breakpoints.device.lg} {
+        width: ${({ isBig }) => isBig ? '70%' : '95%'};
     }
 `;
