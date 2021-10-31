@@ -9,8 +9,11 @@ import {
     GalleryHeader,
     GalleryImg,
     ImgContainer,
-    ImagesWrapper
+    ImagesWrapper,
+    GalleryVideo
 } from './Gallery.css';
+
+import videoLaser from '../../assets/videos/video_laser.mp4';
 
 import image1Small from '../../assets/photos/1_s.jpg';
 import image1Medium from '../../assets/photos/1_m.jpg';
@@ -109,6 +112,7 @@ function Gallery() {
                         />
                     </ImgContainer>
                 ))}
+                <GalleryVideo src={videoLaser} width="400" height="500" loop muted controls/>
             </ImagesWrapper>
         </GalleryWrapper>
     );

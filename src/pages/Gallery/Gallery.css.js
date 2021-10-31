@@ -60,3 +60,8 @@ export const GalleryImg = styled.img`
         width: ${({ isBig }) => isBig ? '70%' : '95%'};
     }
 `;
+
+export const GalleryVideo = styled.video`
+  padding: 2rem;
+  border-radius: 60px;
+`;
