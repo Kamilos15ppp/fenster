@@ -1,9 +1,8 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import breakpoints from 'utils/breakpoints';
+import theme from 'utils/theme';
 
-import headerImage from 'assets/images/header.jpg';
-
-export const HomepageWrapper = styled.section`
+export const Wrapper = styled.div`
   display: flex;
   padding-bottom: 3rem;
   flex-direction: column;
@@ -21,143 +20,162 @@ export const HeaderWrapper = styled.div`
   width: 100%;
 `;
 
-export const HeaderImage = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+const scroll = keyframes`
+  from { transform: translateX(-50%) translateY(0) }
+  to { transform: translateX(-50%) translateY(-30%) }
+`;
+
+export const ScrollIndicator = styled.div`
+  position: absolute;
+  left: 50%;
+  bottom: -40%;
+  transform: translateX(-50%);
+  animation: ${scroll} 0.8s cubic-bezier(0.61, -0.54, 1, 1) infinite alternate;
+  cursor: pointer;
+  z-index: 2;
+
+  @media only screen and ${breakpoints.device.xs} {
+    bottom: -30%;
+  }
+
+  @media only screen and ${breakpoints.device.sm} {
+    bottom: -19%;
+  }
+
+  @media only screen and (orientation: landscape) and ${breakpoints.device.sm} {
+    bottom: -13%;
+  }
+
+  @media only screen and ${breakpoints.device.lg} {
+    bottom: -12%;
+  }
+`;
+
+export const HeaderImage = styled.img`
   width: 100%;
-  height: calc(100vh - 4rem);
-  background-image: url(${headerImage});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 40vh;
+
+  @media only screen and (orientation: landscape) {
+    height: 80vh;
+  }
 `;
 
 export const HeaderImageDarker = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: ${(props) => props.color || ''};
 `;
 
-export const CompanyTitle = styled.h2`
-  font-size: 2.5rem;
-  text-align: center;
-  color: #fff;
-  filter: brightness(100%);
-
-  @media only screen and ${breakpoints.device.sm} {
-    font-size: 3.5rem;
-  }
-
-  @media only screen and ${breakpoints.device.lg} {
-    width: 100%;
-    font-size: 4rem;
-  }
-`;
-
-export const PersonTitle = styled.h2`
-  font-size: 1.8rem;
-  text-align: center;
-  color: #fff;
-  filter: brightness(100%);
-
-  @media only screen and ${breakpoints.device.sm} {
-    font-size: 2.4rem;
-  }
-
-  @media only screen and ${breakpoints.device.lg} {
-    width: 100%;
-    font-size: 3rem;
-  }
-`;
-
-export const HomepageHeader = styled.h1`
-  font-size: 2rem;
-  margin-bottom: 3rem;
+export const Header = styled.h1`
+  font-size: ${theme.fontSize.header.default};
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  width: 100%;
   text-align: center;
 
   @media only screen and ${breakpoints.device.xs} {
-    font-size: 2.4rem;
+    font-size: ${theme.fontSize.header.s};
   }
 
   @media only screen and ${breakpoints.device.sm} {
-    font-size: 3.2rem;
+    font-size: ${theme.fontSize.header.m};
   }
 
   @media only screen and ${breakpoints.device.lg} {
-    width: 100%;
-    font-size: 3.4rem;
+    font-size: ${theme.fontSize.header.l};
   }
 `;
 
 export const ArticleWrapper = styled.article`
   position: relative;
-  display: flex;
-  margin: 3rem 0;
-  justify-content: start;
-  align-items: center;
-  width: 100%;
-  height: 12rem;
+  padding: 0 2.4rem;
+  margin-bottom: 6rem;
+  font-size: ${theme.fontSize.content.default};
+  text-align: justify;
+
+  @media only screen and ${breakpoints.device.xs} {
+    font-size: ${theme.fontSize.content.s};
+  }
 
   @media only screen and ${breakpoints.device.sm} {
-    height: 20rem;
+    padding: 0 7rem;
+    font-size: ${theme.fontSize.content.m};
+    line-height: 3rem;
   }
 
   @media only screen and ${breakpoints.device.lg} {
-    height: 30rem;
+    padding: 0 14rem;
+    font-size: ${theme.fontSize.content.l};
+    line-height: 3.2rem;
   }
 `;
 
-export const HomepageImage = styled.div`
+export const ButtonWrapper = styled.div`
   position: absolute;
-  display: flex;
-  top: 0;
-  right: ${(props) => (props.position === 'right' ? '-1rem' : null)};
-  left: ${(props) => (props.position === 'left' ? '-1rem' : null)};
-  width: 14rem;
-  height: 12rem;
-  justify-content: center;
-  align-items: center;
-  background-image: url(${(props) => props.image});
+  right: 40%;
+  bottom: -10%;
+
+  @media only screen and ${breakpoints.device.sm} {
+    right: 35%;
+  }
+
+  @media only screen and ${breakpoints.device.lg} {
+    right: 20%;
+    bottom: -25%;
+  }
+`;
+
+export const Image = styled.div`
+  width: 100%;
+  height: 40vh;
+  background-image: ${(props) => `url(${props.image})` || ''};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
-  box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.75);
-  z-index: -1;
 
-  @media only screen and ${breakpoints.device.sm} {
-    width: 26rem;
-    height: 20rem;
-  }
-
-  @media only screen and ${breakpoints.device.lg} {
-    width: 40rem;
-    height: 30rem;
+  @media only screen and (orientation: landscape) {
+    height: 80vh;
   }
 `;
 
-export const HomepageImageDarker = styled.div`
+export const Slogan = styled.h3`
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 2rem;
   width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.55);
-`;
-
-export const HomepageImageHeader = styled.h3`
-  font-size: 1.7rem;
-  text-align: center;
   color: #fff;
-  filter: brightness(100%);
+  font-size: 2.5rem;
+  line-height: 4rem;
+  text-align: center;
 
   @media only screen and ${breakpoints.device.sm} {
-    font-size: 3rem;
+    font-size: 4.5rem;
+    line-height: 6rem;
   }
 
   @media only screen and ${breakpoints.device.lg} {
-    font-size: 4rem;
+    font-size: 5rem;
+  }
+`;
+
+export const CooperationLogosWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-gap: 2rem;
+
+  @media only screen and ${breakpoints.device.sm} {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-gap: 6rem;
+  }
+
+  @media only screen and ${breakpoints.device.lg} {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-gap: 6rem;
   }
 `;

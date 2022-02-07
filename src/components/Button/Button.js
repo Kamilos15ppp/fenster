@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 import { BasicButton } from './Button.css';
 
-function Button({ content, position, to }) {
+function Button({ content, to }) {
   return (
     <Link to={to}>
-      <BasicButton position={position}>{content}</BasicButton>
+      <BasicButton>{content}</BasicButton>
     </Link>
   );
 }

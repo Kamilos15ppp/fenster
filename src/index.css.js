@@ -20,6 +20,7 @@ export const GlobalStyles = createGlobalStyle`
   html {
     font-family: 'Poppins', sans-serif;
     font-size: ${theme.fontSize.default};
+    scroll-behavior: smooth;
   }
 `;
 
@@ -38,6 +39,7 @@ export const LoadingIndicator = styled.div`
 `;
 
 export const Main = styled.main`
+  position: relative;
   min-height: 100vh;
   overflow: hidden;
 `;
