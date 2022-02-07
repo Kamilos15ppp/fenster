@@ -81,40 +81,40 @@ export const MenuIcon = styled.div`
 export const MenuList = styled.ul`
   position: absolute;
   display: flex;
-  height: 45vh;
+  height: 50vh;
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: ${(props) => (props.isMenuOpen ? '6rem' : '-55vh')};
+  top: ${(props) => (props.isMenuOpen ? '6rem' : '-50vh')};
   background-color: ${theme.colors.secondary};
   list-style: none;
   transition: 0.8s;
   z-index: 98;
 
   @media only screen and ${breakpoints.device.xs} {
-    height: 40vh;
-    top: ${(props) => (props.isMenuOpen ? '6rem' : '-40vh')};
+    height: 45vh;
+    top: ${(props) => (props.isMenuOpen ? '6rem' : '-45vh')};
   }
 
   @media only screen and (orientation: landscape) and ${breakpoints.device.xs} {
-    height: 50vh;
-    top: ${(props) => (props.isMenuOpen ? '5rem' : '-50vh')};
+    height: 55vh;
+    top: ${(props) => (props.isMenuOpen ? '5rem' : '-55vh')};
   }
 
   @media only screen and ${breakpoints.device.sm} {
-    height: 25vh;
-    top: ${(props) => (props.isMenuOpen ? '8rem' : '-25vh')};
+    height: 30vh;
+    top: ${(props) => (props.isMenuOpen ? '8rem' : '-30vh')};
   }
 
   @media only screen and (orientation: landscape) and ${breakpoints.device.sm} {
-    height: 55vh;
-    top: ${(props) => (props.isMenuOpen ? '8rem' : '-55vh')};
+    height: 45vh;
+    top: ${(props) => (props.isMenuOpen ? '8rem' : '-45vh')};
   }
 
   @media only screen and ${breakpoints.device.lg} {
     top: 0;
-    left: 45rem;
+    right: 15rem;
     flex-direction: row;
     height: 8rem;
     width: auto;
@@ -139,15 +139,16 @@ export const MenuItem = styled.li`
 
 export const MenuOption = styled(Link)`
   display: block;
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   width: 100%;
   color: #fff;
-  font-size: 2.1rem;
+  font-size: 2rem;
   text-decoration: none;
   transition: 0.3s;
 
   @media only screen and ${breakpoints.device.xs} {
-    font-size: 2.3rem;
+    padding: 1rem 0;
+    font-size: 2.1rem;
   }
 
   @media only screen and (orientation: landscape) and ${breakpoints.device.xs} {
@@ -159,13 +160,14 @@ export const MenuOption = styled(Link)`
   }
 
   @media only screen and (orientation: landscape) and ${breakpoints.device.sm} {
-    font-size: 3rem;
+    padding: 0.8rem 0;
+    font-size: 2.3rem;
   }
 
   @media only screen and ${breakpoints.device.lg} {
     display: inline-block;
-    padding: 1rem 1rem;
-    font-size: 2.6rem;
+    padding: 1rem 0.5rem;
+    font-size: 2.4rem;
 
     &:hover {
       color: ${theme.colors.primary};

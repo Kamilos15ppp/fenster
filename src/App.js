@@ -1,13 +1,10 @@
 import { useEffect } from 'react';
-import {
-  Routes,
-  Route,
-  Navigate,
-  useNavigate,
-  useLocation,
-} from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
+import CookieConsent, {
+  Cookies,
+  getCookieConsentValue,
+} from 'react-cookie-consent';
 import { initGA } from './utils/GoogleAnalytics';
 
 import { Homepage, Gallery, About, Contact, Privacy } from './pages';
@@ -18,11 +15,16 @@ import { GlobalStyles, Main } from './index.css';
 
 function App() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const location = useLocation();
 
   const handleAcceptCookie = () => {
     initGA();
+  };
+
+  const handleDeclineCookie = () => {
+    Cookies.remove('_ga');
+    Cookies.remove('_gat');
+    Cookies.remove('_gid');
   };
 
   useEffect(() => {
@@ -45,6 +47,7 @@ function App() {
           { id: 2, content: t('gallery'), to: '/gallery' },
           { id: 3, content: t('about'), to: '/about' },
           { id: 4, content: t('contact'), to: '/contact' },
+          { id: 5, content: t('privacy'), to: '/privacy' },
         ]}
       />
       <Main>
@@ -60,8 +63,8 @@ function App() {
         <CookieConsent
           enableDeclineButton
           buttonText="Ich akzeptiere"
-          declineButtonText="Finde mehr heraus"
-          onDecline={() => navigate('privacy')}
+          declineButtonText="Ich lehne ab"
+          onDecline={handleDeclineCookie}
           onAccept={handleAcceptCookie}
         >
           {t('cookie_info')}
