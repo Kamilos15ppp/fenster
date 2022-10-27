@@ -18,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: ${theme.fontSize.default};
     scroll-behavior: smooth;
   }
