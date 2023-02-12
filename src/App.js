@@ -7,7 +7,7 @@ import CookieConsent, {
 } from 'react-cookie-consent';
 import { initGA } from './utils/GoogleAnalytics';
 
-import { Homepage, Gallery, About, Contact, Privacy } from './pages';
+import { Homepage, Gallery, About, Contact, Privacy, Impressum } from './pages';
 import { Navbar, Footer } from './components';
 import ScrollArrow from './components/ScrollArrow';
 
@@ -58,6 +58,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/impressum" element={<Impressum />} />
         </Routes>
         <ScrollArrow />
         <CookieConsent
@@ -71,7 +72,7 @@ function App() {
         </CookieConsent>
       </Main>
       <Footer
-        privacyLabel={t('privacy')}
+        labels={{ privacy: t('privacy'), impressum: t('impressum') }}
         address="Oberurseler Str. 3, 61440 Oberursel"
         telNumber="+49 176 242 648 54"
         email="nataliastachnik.ns@gmail.com"

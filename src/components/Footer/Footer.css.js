@@ -39,7 +39,7 @@ export const FooterLink = styled.a`
   }
 `;
 
-export const FooterPrivacy = styled(Link)`
+export const FooterHref = styled(Link)`
   margin: 0.7rem 0;
   width: 100%;
   text-align: center;

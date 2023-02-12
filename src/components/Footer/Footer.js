@@ -5,16 +5,17 @@ import {
   FooterLink,
   FooterAddress,
   FooterCopy,
-  FooterPrivacy,
+  FooterHref,
 } from './Footer.css';
 
-function Footer({ address, telNumber, email, privacyLabel }) {
+function Footer({ address, telNumber, email, labels: { privacy, impressum } }) {
   return (
     <FooterWrapper>
       <FooterLink href={`tel:${telNumber}`}>tel: {telNumber}</FooterLink>
       <FooterLink href={`mailto:${email}`}>email: {email}</FooterLink>
       <FooterAddress>{address}</FooterAddress>
-      <FooterPrivacy to="/privacy">{privacyLabel}</FooterPrivacy>
+      <FooterHref to="/privacy">{privacy}</FooterHref>
+      <FooterHref to="/impressum">{impressum}</FooterHref>
       <FooterCopy>
         Copyright S K Fenster&Bauertechnik - Natalia Stachnik
       </FooterCopy>
